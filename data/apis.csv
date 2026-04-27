@@ -1,0 +1,26 @@
+﻿sigla;nome_api;volumetria media mensal;tempo medio resposta (ms);tx erro medio;dias new para pre preleased;dias pre released para released
+EU6;itau-eu6-api-fraud-application-v1-interno;23;15172,18;33,60%;13;34
+FF2;itau-ff2-api-iuconfia-ext-v1-interno;821;14543,84;7,30%;1;47
+NM;itau-nm-api-ingestao-docs-apis-v1-interno;278;14022,4;0,40%;7;20
+HC9;itau-hc9-api-invoices-v1-interno;414;12931,71;8,10%;0;18
+YD3;itau-yd3-api-score-risco-mudanca-v1-interno;42084;12841,83;9,50%;363;123
+FJ1;itau-fj1-api-ai-dispute-open-v1-interno;262;11528,44;5,20%;1;1
+FR4;itau-fr4-api-gtw-mapacorban-v1-interno;2267;11154,26;22,70%;107;13
+EX3;itau-ex3-api-cadastrar-processo-v1-externo;431;10783,94;11,90%;4;11
+EO6;itau-eo6-api-provisioning-api-v1-interno;1330;10616,6;27,70%;19;17
+EA3;itau-ea3-api-automacoes-v1-interno;219;10354,15;27,60%;56;0
+GQ2;itau-gq2-api-users-iamaas-v1-interno;1796;9747,46;6,40%;0;7
+NC2;itau-nc2-api-direcionadorprodutos-v1-interno;6578;9519,21;0,00%;3;24
+FN3;itau-fn3-api-carga-pld-v1-interno;53;9120,42;4,90%;0;19
+UV8;itau-uv8-api-api-triagem-demandas-v1-interno;151;8828,81;2,10%;10;12
+TO2;itau-to2-api-itaumon-monitoracao-corban-v1-interno;11498;8713,13;8,70%;21;48
+SN6;itau-sn6-api-certs-seguranca-v1-interno;11171;8039,8;42,60%;46;6
+VC3;itau-vc3-api-mercado-secundario-v1-externo;43559;6981,05;14,70%;132;39
+HF8;itau-hf8-api-genia-apis-servicenow-v1-interno;122532;6396,15;5,60%;0;0
+C1;itau-c1-api-registrocontato-atendimento-v1-interno;1031090;6191,81;32,40%;35;13
+HN6;itau-hn6-api-motor-habilidades-v1-interno;18560;5142,69;12,20%;2;26
+EX3;itau-ex3-api-juridico-testemunha-v1-interno;100903;5076,01;19,30%;6;109
+FX9;itau-fx9-api-mercado-secundario-v1-interno;48232;4383,38;13,00%;203;8
+ML1;itau-ml1-api-gtwpreaccount-v1-interno;21748;4120,49;15,80%;21;7
+HA7;itau-ha7-api-audioanalytics-v1-interno;134899;4004,97;74,50%;4;68
+QS7;itau-qs7-api-backoffice-v1-interno;964;3888,23;95,40%;38;3

@@ -1,0 +1,4 @@
+.env
+.apis.csv
+*.env
+*.apis.csv

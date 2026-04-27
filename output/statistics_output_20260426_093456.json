@@ -1,0 +1,440 @@
+{
+  "total_apis_analisadas": 25,
+  "descriptive_stats": {
+    "tempo_medio_resposta_ms": {
+      "label": "Latência (ms)",
+      "count": 25,
+      "mean": 8964.1184,
+      "median": 9120.42,
+      "std": 3476.1211,
+      "min": 3888.23,
+      "max": 15172.18,
+      "q1": 6191.81,
+      "q2": 9120.42,
+      "q3": 11154.26,
+      "iqr": 4962.45,
+      "outlier_threshold_superior": 18597.935,
+      "outlier_threshold_inferior": 0.0,
+      "outliers": [],
+      "outliers_count": 0,
+      "quartile_bands": {
+        "itau-c1-api-registrocontato-atendimento-v1-interno": "BAIXO",
+        "itau-ha7-api-audioanalytics-v1-interno": "BAIXO",
+        "itau-ex3-api-juridico-testemunha-v1-interno": "BAIXO",
+        "itau-vc3-api-mercado-secundario-v1-externo": "MÉDIO_BAIXO",
+        "itau-ex3-api-cadastrar-processo-v1-externo": "MÉDIO_ALTO",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno": "MÉDIO_BAIXO",
+        "itau-fx9-api-mercado-secundario-v1-interno": "BAIXO",
+        "itau-yd3-api-score-risco-mudanca-v1-interno": "ALTO",
+        "itau-ml1-api-gtwpreaccount-v1-interno": "BAIXO",
+        "itau-sn6-api-certs-seguranca-v1-interno": "MÉDIO_BAIXO",
+        "itau-fr4-api-gtw-mapacorban-v1-interno": "MÉDIO_ALTO",
+        "itau-qs7-api-backoffice-v1-interno": "BAIXO",
+        "itau-ea3-api-automacoes-v1-interno": "MÉDIO_ALTO",
+        "itau-eo6-api-provisioning-api-v1-interno": "MÉDIO_ALTO",
+        "itau-eu6-api-fraud-application-v1-interno": "ALTO",
+        "itau-hn6-api-motor-habilidades-v1-interno": "BAIXO",
+        "itau-to2-api-itaumon-monitoracao-corban-v1-interno": "MÉDIO_BAIXO",
+        "itau-ff2-api-iuconfia-ext-v1-interno": "ALTO",
+        "itau-nc2-api-direcionadorprodutos-v1-interno": "MÉDIO_ALTO",
+        "itau-gq2-api-users-iamaas-v1-interno": "MÉDIO_ALTO",
+        "itau-hc9-api-invoices-v1-interno": "ALTO",
+        "itau-nm-api-ingestao-docs-apis-v1-interno": "ALTO",
+        "itau-fj1-api-ai-dispute-open-v1-interno": "ALTO",
+        "itau-uv8-api-api-triagem-demandas-v1-interno": "MÉDIO_BAIXO",
+        "itau-fn3-api-carga-pld-v1-interno": "MÉDIO_BAIXO"
+      }
+    },
+    "tx_erro_medio": {
+      "label": "Taxa de Erro (%)",
+      "count": 25,
+      "mean": 20.064,
+      "median": 12.2,
+      "std": 22.6712,
+      "min": 0.0,
+      "max": 95.4,
+      "q1": 6.4,
+      "q2": 12.2,
+      "q3": 27.6,
+      "iqr": 21.2,
+      "outlier_threshold_superior": 59.4,
+      "outlier_threshold_inferior": 0.0,
+      "outliers": [
+        "itau-ha7-api-audioanalytics-v1-interno",
+        "itau-qs7-api-backoffice-v1-interno"
+      ],
+      "outliers_count": 2,
+      "quartile_bands": {
+        "itau-c1-api-registrocontato-atendimento-v1-interno": "ALTO",
+        "itau-ha7-api-audioanalytics-v1-interno": "OUTLIER",
+        "itau-ex3-api-juridico-testemunha-v1-interno": "MÉDIO_ALTO",
+        "itau-vc3-api-mercado-secundario-v1-externo": "MÉDIO_ALTO",
+        "itau-ex3-api-cadastrar-processo-v1-externo": "MÉDIO_BAIXO",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno": "BAIXO",
+        "itau-fx9-api-mercado-secundario-v1-interno": "MÉDIO_ALTO",
+        "itau-yd3-api-score-risco-mudanca-v1-interno": "MÉDIO_BAIXO",
+        "itau-ml1-api-gtwpreaccount-v1-interno": "MÉDIO_ALTO",
+        "itau-sn6-api-certs-seguranca-v1-interno": "ALTO",
+        "itau-fr4-api-gtw-mapacorban-v1-interno": "MÉDIO_ALTO",
+        "itau-qs7-api-backoffice-v1-interno": "OUTLIER",
+        "itau-ea3-api-automacoes-v1-interno": "MÉDIO_ALTO",
+        "itau-eo6-api-provisioning-api-v1-interno": "ALTO",
+        "itau-eu6-api-fraud-application-v1-interno": "ALTO",
+        "itau-hn6-api-motor-habilidades-v1-interno": "MÉDIO_BAIXO",
+        "itau-to2-api-itaumon-monitoracao-corban-v1-interno": "MÉDIO_BAIXO",
+        "itau-ff2-api-iuconfia-ext-v1-interno": "MÉDIO_BAIXO",
+        "itau-nc2-api-direcionadorprodutos-v1-interno": "BAIXO",
+        "itau-gq2-api-users-iamaas-v1-interno": "BAIXO",
+        "itau-hc9-api-invoices-v1-interno": "MÉDIO_BAIXO",
+        "itau-nm-api-ingestao-docs-apis-v1-interno": "BAIXO",
+        "itau-fj1-api-ai-dispute-open-v1-interno": "BAIXO",
+        "itau-uv8-api-api-triagem-demandas-v1-interno": "BAIXO",
+        "itau-fn3-api-carga-pld-v1-interno": "BAIXO"
+      }
+    },
+    "custo_mensal_brl": {
+      "label": "Custo Mensal (R$)",
+      "count": 25,
+      "mean": 7.3872,
+      "median": 0.38,
+      "std": 23.7602,
+      "min": 0.0,
+      "max": 119.62,
+      "q1": 0.07,
+      "q2": 0.38,
+      "q3": 4.68,
+      "iqr": 4.61,
+      "outlier_threshold_superior": 11.595,
+      "outlier_threshold_inferior": 0.0,
+      "outliers": [
+        "itau-c1-api-registrocontato-atendimento-v1-interno",
+        "itau-ha7-api-audioanalytics-v1-interno",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno"
+      ],
+      "outliers_count": 3,
+      "quartile_bands": {
+        "itau-c1-api-registrocontato-atendimento-v1-interno": "OUTLIER",
+        "itau-ha7-api-audioanalytics-v1-interno": "OUTLIER",
+        "itau-ex3-api-juridico-testemunha-v1-interno": "ALTO",
+        "itau-vc3-api-mercado-secundario-v1-externo": "ALTO",
+        "itau-ex3-api-cadastrar-processo-v1-externo": "BAIXO",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno": "OUTLIER",
+        "itau-fx9-api-mercado-secundario-v1-interno": "MÉDIO_ALTO",
+        "itau-yd3-api-score-risco-mudanca-v1-interno": "ALTO",
+        "itau-ml1-api-gtwpreaccount-v1-interno": "MÉDIO_ALTO",
+        "itau-sn6-api-certs-seguranca-v1-interno": "MÉDIO_ALTO",
+        "itau-fr4-api-gtw-mapacorban-v1-interno": "MÉDIO_BAIXO",
+        "itau-qs7-api-backoffice-v1-interno": "MÉDIO_BAIXO",
+        "itau-ea3-api-automacoes-v1-interno": "BAIXO",
+        "itau-eo6-api-provisioning-api-v1-interno": "MÉDIO_BAIXO",
+        "itau-eu6-api-fraud-application-v1-interno": "BAIXO",
+        "itau-hn6-api-motor-habilidades-v1-interno": "MÉDIO_ALTO",
+        "itau-to2-api-itaumon-monitoracao-corban-v1-interno": "MÉDIO_ALTO",
+        "itau-ff2-api-iuconfia-ext-v1-interno": "MÉDIO_BAIXO",
+        "itau-nc2-api-direcionadorprodutos-v1-interno": "MÉDIO_ALTO",
+        "itau-gq2-api-users-iamaas-v1-interno": "MÉDIO_BAIXO",
+        "itau-hc9-api-invoices-v1-interno": "MÉDIO_BAIXO",
+        "itau-nm-api-ingestao-docs-apis-v1-interno": "BAIXO",
+        "itau-fj1-api-ai-dispute-open-v1-interno": "BAIXO",
+        "itau-uv8-api-api-triagem-demandas-v1-interno": "BAIXO",
+        "itau-fn3-api-carga-pld-v1-interno": "BAIXO"
+      }
+    },
+    "custo_desperdicio_brl": {
+      "label": "Desperdício (R$)",
+      "count": 25,
+      "mean": 2.1892,
+      "median": 0.08,
+      "std": 7.8446,
+      "min": 0.0,
+      "max": 38.76,
+      "q1": 0.01,
+      "q2": 0.08,
+      "q3": 0.64,
+      "iqr": 0.63,
+      "outlier_threshold_superior": 1.585,
+      "outlier_threshold_inferior": 0.0,
+      "outliers": [
+        "itau-c1-api-registrocontato-atendimento-v1-interno",
+        "itau-ha7-api-audioanalytics-v1-interno",
+        "itau-ex3-api-juridico-testemunha-v1-interno"
+      ],
+      "outliers_count": 3,
+      "quartile_bands": {
+        "itau-c1-api-registrocontato-atendimento-v1-interno": "OUTLIER",
+        "itau-ha7-api-audioanalytics-v1-interno": "OUTLIER",
+        "itau-ex3-api-juridico-testemunha-v1-interno": "OUTLIER",
+        "itau-vc3-api-mercado-secundario-v1-externo": "ALTO",
+        "itau-ex3-api-cadastrar-processo-v1-externo": "BAIXO",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno": "ALTO",
+        "itau-fx9-api-mercado-secundario-v1-interno": "MÉDIO_ALTO",
+        "itau-yd3-api-score-risco-mudanca-v1-interno": "ALTO",
+        "itau-ml1-api-gtwpreaccount-v1-interno": "MÉDIO_ALTO",
+        "itau-sn6-api-certs-seguranca-v1-interno": "MÉDIO_ALTO",
+        "itau-fr4-api-gtw-mapacorban-v1-interno": "MÉDIO_ALTO",
+        "itau-qs7-api-backoffice-v1-interno": "MÉDIO_BAIXO",
+        "itau-ea3-api-automacoes-v1-interno": "BAIXO",
+        "itau-eo6-api-provisioning-api-v1-interno": "MÉDIO_BAIXO",
+        "itau-eu6-api-fraud-application-v1-interno": "BAIXO",
+        "itau-hn6-api-motor-habilidades-v1-interno": "MÉDIO_ALTO",
+        "itau-to2-api-itaumon-monitoracao-corban-v1-interno": "MÉDIO_ALTO",
+        "itau-ff2-api-iuconfia-ext-v1-interno": "BAIXO",
+        "itau-nc2-api-direcionadorprodutos-v1-interno": "BAIXO",
+        "itau-gq2-api-users-iamaas-v1-interno": "MÉDIO_BAIXO",
+        "itau-hc9-api-invoices-v1-interno": "BAIXO",
+        "itau-nm-api-ingestao-docs-apis-v1-interno": "BAIXO",
+        "itau-fj1-api-ai-dispute-open-v1-interno": "BAIXO",
+        "itau-uv8-api-api-triagem-demandas-v1-interno": "BAIXO",
+        "itau-fn3-api-carga-pld-v1-interno": "BAIXO"
+      }
+    },
+    "volumetria_media_mensal": {
+      "label": "Volumetria",
+      "count": 25,
+      "mean": 64074.52,
+      "median": 2267.0,
+      "std": 205246.4003,
+      "min": 23.0,
+      "max": 1031090.0,
+      "q1": 414.0,
+      "q2": 2267.0,
+      "q3": 42084.0,
+      "iqr": 41670.0,
+      "outlier_threshold_superior": 104589.0,
+      "outlier_threshold_inferior": 0.0,
+      "outliers": [
+        "itau-c1-api-registrocontato-atendimento-v1-interno",
+        "itau-ha7-api-audioanalytics-v1-interno",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno"
+      ],
+      "outliers_count": 3,
+      "quartile_bands": {
+        "itau-c1-api-registrocontato-atendimento-v1-interno": "OUTLIER",
+        "itau-ha7-api-audioanalytics-v1-interno": "OUTLIER",
+        "itau-ex3-api-juridico-testemunha-v1-interno": "ALTO",
+        "itau-vc3-api-mercado-secundario-v1-externo": "ALTO",
+        "itau-ex3-api-cadastrar-processo-v1-externo": "MÉDIO_BAIXO",
+        "itau-hf8-api-genia-apis-servicenow-v1-interno": "OUTLIER",
+        "itau-fx9-api-mercado-secundario-v1-interno": "ALTO",
+        "itau-yd3-api-score-risco-mudanca-v1-interno": "MÉDIO_ALTO",
+        "itau-ml1-api-gtwpreaccount-v1-interno": "MÉDIO_ALTO",
+        "itau-sn6-api-certs-seguranca-v1-interno": "MÉDIO_ALTO",
+        "itau-fr4-api-gtw-mapacorban-v1-interno": "MÉDIO_BAIXO",
+        "itau-qs7-api-backoffice-v1-interno": "MÉDIO_BAIXO",
+        "itau-ea3-api-automacoes-v1-interno": "BAIXO",
+        "itau-eo6-api-provisioning-api-v1-interno": "MÉDIO_BAIXO",
+        "itau-eu6-api-fraud-application-v1-interno": "BAIXO",
+        "itau-hn6-api-motor-habilidades-v1-interno": "MÉDIO_ALTO",
+        "itau-to2-api-itaumon-monitoracao-corban-v1-interno": "MÉDIO_ALTO",
+        "itau-ff2-api-iuconfia-ext-v1-interno": "MÉDIO_BAIXO",
+        "itau-nc2-api-direcionadorprodutos-v1-interno": "MÉDIO_ALTO",
+        "itau-gq2-api-users-iamaas-v1-interno": "MÉDIO_BAIXO",
+        "itau-hc9-api-invoices-v1-interno": "BAIXO",
+        "itau-nm-api-ingestao-docs-apis-v1-interno": "BAIXO",
+        "itau-fj1-api-ai-dispute-open-v1-interno": "BAIXO",
+        "itau-uv8-api-api-triagem-demandas-v1-interno": "BAIXO",
+        "itau-fn3-api-carga-pld-v1-interno": "BAIXO"
+      }
+    }
+  },
+  "correlations": {
+    "tempo_medio_resposta_ms_vs_tx_erro_medio": {
+      "label": "latência vs taxa de erro",
+      "r": -0.4186,
+      "p_value": 0.0373,
+      "significant": true,
+      "strength": "moderada",
+      "direction": "negativa",
+      "interpretation": "Correlação moderada negativa — estatisticamente significativa (r=-0.42, p=0.037)"
+    },
+    "tempo_medio_resposta_ms_vs_custo_mensal_brl": {
+      "label": "latência vs custo",
+      "r": -0.247,
+      "p_value": 0.2339,
+      "significant": false,
+      "strength": "fraca",
+      "direction": "negativa",
+      "interpretation": "Correlação fraca negativa — não significativa (r=-0.25, p=0.234)"
+    },
+    "tx_erro_medio_vs_custo_mensal_brl": {
+      "label": "taxa de erro vs custo",
+      "r": 0.1367,
+      "p_value": 0.5145,
+      "significant": false,
+      "strength": "fraca",
+      "direction": "positiva",
+      "interpretation": "Correlação fraca positiva — não significativa (r=0.14, p=0.515)"
+    },
+    "tx_erro_medio_vs_custo_desperdicio_brl": {
+      "label": "taxa de erro vs desperdício",
+      "r": 0.228,
+      "p_value": 0.273,
+      "significant": false,
+      "strength": "fraca",
+      "direction": "positiva",
+      "interpretation": "Correlação fraca positiva — não significativa (r=0.23, p=0.273)"
+    },
+    "volumetria_media_mensal_vs_custo_mensal_brl": {
+      "label": "volumetria vs custo",
+      "r": 0.9992,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "forte",
+      "direction": "positiva",
+      "interpretation": "Correlação forte positiva — estatisticamente significativa (r=1.00, p=0.000)"
+    },
+    "tempo_medio_resposta_ms_vs_score": {
+      "label": "latência vs score de risco",
+      "r": -0.5203,
+      "p_value": 0.0077,
+      "significant": true,
+      "strength": "moderada",
+      "direction": "negativa",
+      "interpretation": "Correlação moderada negativa — estatisticamente significativa (r=-0.52, p=0.008)"
+    },
+    "tx_erro_medio_vs_score": {
+      "label": "taxa de erro vs score de risco",
+      "r": 0.3572,
+      "p_value": 0.0796,
+      "significant": false,
+      "strength": "fraca",
+      "direction": "positiva",
+      "interpretation": "Correlação fraca positiva — não significativa (r=0.36, p=0.080)"
+    }
+  },
+  "scenarios": {
+    "baseline": {
+      "custo_total_brl": 184.68,
+      "desperdicio_total_brl": 54.73,
+      "pct_desperdicio": 29.6
+    },
+    "reducao_erro": {
+      "reducao_10pct": {
+        "reducao_aplicada_pct": 10,
+        "economia_mensal_brl": 5.47,
+        "novo_desperdicio_total_brl": 49.26,
+        "pct_desperdicio_recuperado": 10.0
+      },
+      "reducao_20pct": {
+        "reducao_aplicada_pct": 20,
+        "economia_mensal_brl": 10.95,
+        "novo_desperdicio_total_brl": 43.78,
+        "pct_desperdicio_recuperado": 20.0
+      },
+      "reducao_30pct": {
+        "reducao_aplicada_pct": 30,
+        "economia_mensal_brl": 16.42,
+        "novo_desperdicio_total_brl": 38.31,
+        "pct_desperdicio_recuperado": 30.0
+      }
+    },
+    "reducao_latencia": {
+      "reducao_10pct": {
+        "reducao_aplicada_pct": 10,
+        "economia_mensal_brl": 46.34,
+        "novo_custo_total_brl": 138.34,
+        "pct_custo_economizado": 25.1,
+        "top_apis_impactadas": [
+          {
+            "api_name": "itau-c1-api-registrocontato-atendimento-v1-interno",
+            "economia_brl": 29.9022
+          },
+          {
+            "api_name": "itau-ha7-api-audioanalytics-v1-interno",
+            "economia_brl": 3.5999
+          },
+          {
+            "api_name": "itau-hf8-api-genia-apis-servicenow-v1-interno",
+            "economia_brl": 3.5816
+          },
+          {
+            "api_name": "itau-ex3-api-juridico-testemunha-v1-interno",
+            "economia_brl": 2.8041
+          },
+          {
+            "api_name": "itau-yd3-api-score-risco-mudanca-v1-interno",
+            "economia_brl": 1.5135
+          }
+        ]
+      },
+      "reducao_20pct": {
+        "reducao_aplicada_pct": 20,
+        "economia_mensal_brl": 56.64,
+        "novo_custo_total_brl": 128.04,
+        "pct_custo_economizado": 30.7,
+        "top_apis_impactadas": [
+          {
+            "api_name": "itau-c1-api-registrocontato-atendimento-v1-interno",
+            "economia_brl": 36.6057
+          },
+          {
+            "api_name": "itau-hf8-api-genia-apis-servicenow-v1-interno",
+            "economia_brl": 4.4045
+          },
+          {
+            "api_name": "itau-ha7-api-audioanalytics-v1-interno",
+            "economia_brl": 4.1671
+          },
+          {
+            "api_name": "itau-ex3-api-juridico-testemunha-v1-interno",
+            "economia_brl": 3.3419
+          },
+          {
+            "api_name": "itau-yd3-api-score-risco-mudanca-v1-interno",
+            "economia_brl": 2.0809
+          }
+        ]
+      },
+      "reducao_30pct": {
+        "reducao_aplicada_pct": 30,
+        "economia_mensal_brl": 66.94,
+        "novo_custo_total_brl": 117.74,
+        "pct_custo_economizado": 36.2,
+        "top_apis_impactadas": [
+          {
+            "api_name": "itau-c1-api-registrocontato-atendimento-v1-interno",
+            "economia_brl": 43.3092
+          },
+          {
+            "api_name": "itau-hf8-api-genia-apis-servicenow-v1-interno",
+            "economia_brl": 5.2274
+          },
+          {
+            "api_name": "itau-ha7-api-audioanalytics-v1-interno",
+            "economia_brl": 4.7344
+          },
+          {
+            "api_name": "itau-ex3-api-juridico-testemunha-v1-interno",
+            "economia_brl": 3.8797
+          },
+          {
+            "api_name": "itau-yd3-api-score-risco-mudanca-v1-interno",
+            "economia_brl": 2.6484
+          }
+        ]
+      }
+    }
+  },
+  "insights": [
+    "Latência mediana é 9120ms — 6 APIs (24%) estão acima do P75 (11154ms)",
+    "1 APIs (4%) operam com taxa de erro zero",
+    "23 APIs (92%) têm taxa de erro ≥1% — limiar que aciona nível ATENÇÃO no modelo de risco",
+    "21 APIs (84%) com taxa de erro ≥5% — classificadas como PROBLEMA/CRÍTICO, impacto direto no score",
+    "2 API(s) são outliers de taxa de erro (acima de 59.4%): itau-ha7-api-audioanalytics-v1-interno, itau-qs7-api-backoffice-v1-interno",
+    "Custo operacional total: R$184.68/mês — R$54.73 (29.6%) são desperdício por requisições com erro",
+    "As 3 APIs de maior custo (C1, HF8, HA7) concentram 79.4% do gasto total (R$146.65/mês)",
+    "3 API(s) são outliers de custo (acima de R$11.60/mês): itau-c1-api-registrocontato-atendimento-v1-interno, itau-ha7-api-audioanalytics-v1-interno, itau-hf8-api-genia-apis-servicenow-v1-interno",
+    "25 de 25 APIs (100%) requerem ação — 7 em CRÍTICO e 18 em ALTO",
+    "As 7 APIs em CRÍTICO representam R$167.33/mês em custo operacional",
+    "[Correlação forte] Volumetria vs custo: Correlação forte positiva — estatisticamente significativa (r=1.00, p=0.000)",
+    "[Correlação moderada] Latência vs taxa de erro: Correlação moderada negativa — estatisticamente significativa (r=-0.42, p=0.037)",
+    "[Correlação moderada] Latência vs score de risco: Correlação moderada negativa — estatisticamente significativa (r=-0.52, p=0.008)",
+    "Principal driver de score de risco: latência vs score de risco (r=-0.52) — endereçar esta variável tem maior impacto no risco calculado",
+    "Reduzir taxa de erro em 20% economizaria R$10.95/mês (20.0% do desperdício atual)",
+    "Reduzir latência em 20% economizaria R$56.64/mês (30.7% do custo operacional)",
+    "Passar de 20% para 30% de redução de latência gera adicional de R$10.30/mês — retorno marginal a avaliar",
+    "Cluster CRÍTICAS_DE_NEGÓCIO: 2 APIs externas de alto risco — impacto direto no cliente final; custo R$5.48/mês (3.0% do total)",
+    "Cluster GARGALO_OPERACIONAL: 10 APIs com maturidade crítica (score médio 5.07) — risco de instabilidade em releases; desperdício R$53.11/mês",
+    "Cluster CUSTO_ALTO: 9 APIs concentram R$177.20/mês (95.9% do custo total) com 30.2% em desperdício por erro"
+  ]
+}

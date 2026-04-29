@@ -2,3 +2,4 @@
 .apis.csv
 *.env
 *.apis.csv
+.claude

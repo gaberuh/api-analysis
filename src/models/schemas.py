@@ -39,6 +39,7 @@ class APIAnalysis(BaseModel):
     tx_erro_medio: float
     dias_new_para_pre_released: int
     dias_pre_released_para_released: int
+    clusters: List[str] = Field(default_factory=list)
 
 class AuditLog(BaseModel):
     """Log de auditoria (output_schema.md)"""

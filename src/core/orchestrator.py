@@ -15,6 +15,7 @@ from ..validators.validator import Validator
 from ..models.schemas import APIAnalysis, OutputFinal
 from ..models.enums import NivelRisco
 from ..statistics.engine import run_statistics
+from ..exporters.csv_exporter import CSVExporter
 
 logger = setup_logger(__name__)
 
@@ -65,12 +66,15 @@ def run_analysis(csv_path: Path) -> OutputFinal:
     # ETAPA 4-9: Score e classificação final
     logger.info("ETAPA 4-9: Calculando scores...")
     resultados: List[APIAnalysis] = []
-    volumes_dict: Dict[str, str] = {}
 
     for temp in analises_temp:
         custo_nivel = custo_classificacoes.get(temp['api'].sigla, NivelRisco.NORMAL)
 
-        tem_critico = any([
+        # APIs sem volumetria não têm tráfego real: dominância de CRÍTICO não se aplica,
+        # pois métricas como maturidade (dias em estágio) não representam risco operacional
+        # quando não há chamadas. Sem este guard, maturidade CRÍTICO forçaria score >= 3.5
+        # e classificaria a API como ALTO, impedindo-a de entrar no cluster LONG_TAIL.
+        tem_critico = temp['api'].volumetria > 0 and any([
             temp['perf_risk'] == NivelRisco.CRITICO,
             temp['err_risk'] == NivelRisco.CRITICO,
             temp['mat_risk'] == NivelRisco.CRITICO,
@@ -115,7 +119,6 @@ def run_analysis(csv_path: Path) -> OutputFinal:
         )
 
         resultados.append(analise)
-        volumes_dict[temp['api'].sigla] = temp['vol_nivel'].value
 
         logger.debug(
             f"API {temp['api'].sigla}: score_base={score_base:.2f}, score_final={score_final:.2f}, risco={risco_final.value}"
@@ -130,7 +133,15 @@ def run_analysis(csv_path: Path) -> OutputFinal:
 
     # ETAPA 12: Clusters
     logger.info("ETAPA 12: Gerando clusters...")
-    clusters = ClusterEngine.generate_all_clusters(resultados, volumes_dict)
+    clusters = ClusterEngine.generate_all_clusters(resultados)
+
+    # Popula campo `clusters` em cada APIAnalysis com os clusters a que pertence
+    api_para_clusters: Dict[str, List[str]] = {}
+    for nome_cluster, dados in clusters.items():
+        for api_name in dados.get('api_names', []):
+            api_para_clusters.setdefault(api_name, []).append(nome_cluster)
+    for r in resultados:
+        r.clusters = api_para_clusters.get(r.api_name, [])
 
     # ETAPA 13-14: Resumo executivo
     impacto_total = sum(r.custo_mensal_brl for r in resultados)
@@ -219,6 +230,11 @@ def save_analysis_outputs(resultado: OutputFinal, timestamp: str) -> None:
         with open(statistics_file, 'w', encoding='utf-8') as f:
             json.dump(resultado.statistics, f, indent=2, ensure_ascii=False)
         logger.info(f"📄 Estatísticas avançadas salvas em: {statistics_file}")
+
+    if resultado.detalhamento:
+        csv_file = OUTPUT_DIR / f"detalhamento_{timestamp}.csv"
+        CSVExporter.export(resultado.detalhamento, csv_file)
+        logger.info(f"📄 Detalhamento CSV salvo em: {csv_file}")
 
 
 def _build_visao_sigla(resultados: List[APIAnalysis]) -> Dict:

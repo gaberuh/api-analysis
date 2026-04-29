@@ -59,9 +59,9 @@ def setup_logger(name: str = "api_analyzer") -> logging.Logger:
 
     return logger
 
-TAXA_CAMBIO = float(os.getenv("TAXA_CAMBIO", 5.0))
-PERCENTIL_CRITICO = int(os.getenv("PERCENTIL_CRITICO", 90))
-PERCENTIL_ALTO = int(os.getenv("PERCENTIL_ALTO", 70))
+TAXA_CAMBIO = 5.0
+PERCENTIL_CRITICO = 90
+PERCENTIL_ALTO = 70
 
 # Pesos do score (workflow etapa 5)
 SCORE_WEIGHTS = {
@@ -88,7 +88,7 @@ PERF_EXTERNA = (500, 800, 1200)
 ERROR_THRESHOLDS = (0.1, 1.0, 5.0, 10.0)
 
 # Volumetria thresholds (risk_criteria.md #4) - (baixo<, medio<=, alto<=)
-VOLUMETRIA_THRESHOLDS = (1_000, 100_000, 1_000_000)
+VOLUMETRIA_THRESHOLDS = (30, 100_000, 1_000_000)
 
 # Maturidade thresholds em dias (risk_criteria.md #6) - (normal, atencao)
 MATURIDADE_NEW_PRE = (15, 30)

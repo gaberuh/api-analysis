@@ -367,3 +367,821 @@ TypeError: Object of type bool is not JSON serializable
 2026-04-26 09:34:56 | INFO     | __main__ | Impacto total: R$ 184.68
 2026-04-26 09:34:56 | INFO     | __main__ | Desperdício: R$ 54.73
 2026-04-26 09:34:56 | INFO     | __main__ | ============================================================
+2026-04-28 20:43:40 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:43:40 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 20:43:40 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:43:40 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 20:43:40 | ERROR    | __main__ | Erro fatal durante a execução: 'tempo_ms'
+Traceback (most recent call last):
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'tempo_ms'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/main.py", line 24, in main
+    resultado = run_analysis(CSV_PATH)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/core/orchestrator.py", line 31, in run_analysis
+    apis = NormalizationEngine().process(csv_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 55, in process
+    apis = [self.normalize_api(row) for _, row in df.iterrows()]
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 38, in normalize_api
+    tempo = str(row['tempo_ms']).replace(',', '.')
+                ~~~^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 959, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1046, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'tempo_ms'
+2026-04-28 20:44:47 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:44:47 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 20:44:47 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:44:47 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 20:44:47 | ERROR    | __main__ | Erro fatal durante a execução: cannot convert float NaN to integer
+Traceback (most recent call last):
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/main.py", line 24, in main
+    resultado = run_analysis(CSV_PATH)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/core/orchestrator.py", line 31, in run_analysis
+    apis = NormalizationEngine().process(csv_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 55, in process
+    apis = [self.normalize_api(row) for _, row in df.iterrows()]
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 49, in normalize_api
+    dias_new_pre=int(row['dias_new_pre']),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer
+2026-04-28 20:48:44 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:48:44 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 20:48:44 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:48:44 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 20:48:44 | ERROR    | __main__ | Erro fatal durante a execução: cannot convert float NaN to integer
+Traceback (most recent call last):
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/main.py", line 24, in main
+    resultado = run_analysis(CSV_PATH)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/core/orchestrator.py", line 31, in run_analysis
+    apis = NormalizationEngine().process(csv_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 55, in process
+    apis = [self.normalize_api(row) for _, row in df.iterrows()]
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 49, in normalize_api
+    dias_new_pre=int(row['dias_new_pre']),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer
+2026-04-28 20:49:10 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:49:10 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 20:49:10 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:49:10 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 20:49:10 | ERROR    | __main__ | Erro fatal durante a execução: cannot convert float NaN to integer
+Traceback (most recent call last):
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/main.py", line 24, in main
+    resultado = run_analysis(CSV_PATH)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/core/orchestrator.py", line 31, in run_analysis
+    apis = NormalizationEngine().process(csv_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 55, in process
+    apis = [self.normalize_api(row) for _, row in df.iterrows()]
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 49, in normalize_api
+    dias_new_pre=int(row['dias_new_pre']),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | 322 APIs carregadas e normalizadas
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | Total de APIs analisadas: 322
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_205009.json
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_205009.json
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_205009.json
+2026-04-28 20:50:09 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_205009.json
+2026-04-28 20:50:09 | INFO     | __main__ | ============================================================
+2026-04-28 20:50:09 | INFO     | __main__ | Status: VALIDO
+2026-04-28 20:50:09 | INFO     | __main__ | Total APIs: 322
+2026-04-28 20:50:09 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 20:50:09 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 20:50:09 | INFO     | __main__ | ============================================================
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | 322 APIs carregadas e normalizadas
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | Total de APIs analisadas: 322
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_205132.json
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_205132.json
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_205132.json
+2026-04-28 20:51:32 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_205132.json
+2026-04-28 20:51:32 | INFO     | __main__ | ============================================================
+2026-04-28 20:51:32 | INFO     | __main__ | Status: VALIDO
+2026-04-28 20:51:32 | INFO     | __main__ | Total APIs: 322
+2026-04-28 20:51:32 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 20:51:32 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 20:51:32 | INFO     | __main__ | ============================================================
+2026-04-28 21:00:35 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:00:35 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:00:35 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:00:35 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:00:35 | ERROR    | __main__ | Erro fatal durante a execução: invalid literal for int() with base 10: '34,1'
+Traceback (most recent call last):
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/main.py", line 24, in main
+    resultado = run_analysis(CSV_PATH)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/core/orchestrator.py", line 31, in run_analysis
+    apis = NormalizationEngine().process(csv_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 55, in process
+    apis = [self.normalize_api(row) for _, row in df.iterrows()]
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookproa1990/PycharmProjects/ai-api-analysis/src/engines/normalization_engine.py", line 49, in normalize_api
+    dias_new_pre=int(row['dias_new_pre']),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '34,1'
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_211244.json
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_211244.json
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_211244.json
+2026-04-28 21:12:44 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_211244.json
+2026-04-28 21:12:44 | INFO     | __main__ | ============================================================
+2026-04-28 21:12:44 | INFO     | __main__ | Status: VALIDO
+2026-04-28 21:12:44 | INFO     | __main__ | Total APIs: 323
+2026-04-28 21:12:44 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 21:12:44 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 21:12:44 | INFO     | __main__ | ============================================================
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_211252.json
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_211252.json
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_211252.json
+2026-04-28 21:12:52 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_211252.json
+2026-04-28 21:12:52 | INFO     | __main__ | ============================================================
+2026-04-28 21:12:52 | INFO     | __main__ | Status: VALIDO
+2026-04-28 21:12:52 | INFO     | __main__ | Total APIs: 323
+2026-04-28 21:12:52 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 21:12:52 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 21:12:52 | INFO     | __main__ | ============================================================
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_215011.json
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_215011.json
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_215011.json
+2026-04-28 21:50:11 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_215011.json
+2026-04-28 21:50:11 | INFO     | __main__ | ============================================================
+2026-04-28 21:50:11 | INFO     | __main__ | Status: VALIDO
+2026-04-28 21:50:11 | INFO     | __main__ | Total APIs: 323
+2026-04-28 21:50:11 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 21:50:11 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 21:50:11 | INFO     | __main__ | ============================================================
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:52:39 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:52:40 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_215239.json
+2026-04-28 21:52:40 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_215239.json
+2026-04-28 21:52:40 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_215239.json
+2026-04-28 21:52:40 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_215239.json
+2026-04-28 21:52:40 | INFO     | __main__ | ============================================================
+2026-04-28 21:52:40 | INFO     | __main__ | Status: VALIDO
+2026-04-28 21:52:40 | INFO     | __main__ | Total APIs: 323
+2026-04-28 21:52:40 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 21:52:40 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 21:52:40 | INFO     | __main__ | ============================================================
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:55:12 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:55:36 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:57:26 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_215741.json
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_215741.json
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_215741.json
+2026-04-28 21:57:41 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_215741.json
+2026-04-28 21:57:41 | INFO     | __main__ | ============================================================
+2026-04-28 21:57:41 | INFO     | __main__ | Status: VALIDO
+2026-04-28 21:57:41 | INFO     | __main__ | Total APIs: 323
+2026-04-28 21:57:41 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 21:57:41 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 21:57:41 | INFO     | __main__ | ============================================================
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:01:29 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_220225.json
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_220225.json
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_220225.json
+2026-04-28 22:02:25 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_220225.json
+2026-04-28 22:02:25 | INFO     | __main__ | ============================================================
+2026-04-28 22:02:25 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:02:25 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:02:25 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:02:25 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:02:25 | INFO     | __main__ | ============================================================
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:06:38 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_220859.json
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_220859.json
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_220859.json
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_220859.json
+2026-04-28 22:08:59 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_220859.csv
+2026-04-28 22:08:59 | INFO     | __main__ | ============================================================
+2026-04-28 22:08:59 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:08:59 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:08:59 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:08:59 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:08:59 | INFO     | __main__ | ============================================================
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_220936.json
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_220936.json
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_220936.json
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_220936.json
+2026-04-28 22:09:36 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_220936.csv
+2026-04-28 22:09:36 | INFO     | __main__ | ============================================================
+2026-04-28 22:09:36 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:09:36 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:09:36 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:09:36 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:09:36 | INFO     | __main__ | ============================================================
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:12:24 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:13:38 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:14:23 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_221433.json
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_221433.json
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_221433.json
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_221433.json
+2026-04-28 22:14:33 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_221433.csv
+2026-04-28 22:14:33 | INFO     | __main__ | ============================================================
+2026-04-28 22:14:33 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:14:33 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:14:33 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:14:33 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:14:33 | INFO     | __main__ | ============================================================
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_221506.json
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_221506.json
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_221506.json
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_221506.json
+2026-04-28 22:15:06 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_221506.csv
+2026-04-28 22:15:06 | INFO     | __main__ | ============================================================
+2026-04-28 22:15:06 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:15:06 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:15:06 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:15:06 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:15:06 | INFO     | __main__ | ============================================================
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator |   23 insights gerados
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_222406.json
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_222406.json
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_222406.json
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_222406.json
+2026-04-28 22:24:06 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_222406.csv
+2026-04-28 22:24:06 | INFO     | __main__ | ============================================================
+2026-04-28 22:24:06 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:24:06 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:24:06 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:24:06 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:24:06 | INFO     | __main__ | ============================================================
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator |   23 insights gerados
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_222415.json
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_222415.json
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_222415.json
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_222415.json
+2026-04-28 22:24:15 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_222415.csv
+2026-04-28 22:24:15 | INFO     | __main__ | ============================================================
+2026-04-28 22:24:15 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:24:15 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:24:15 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:24:15 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:24:15 | INFO     | __main__ | ============================================================
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator |   23 insights gerados
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_222437.json
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_222437.json
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_222437.json
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_222437.json
+2026-04-28 22:24:37 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_222437.csv
+2026-04-28 22:24:37 | INFO     | __main__ | ============================================================
+2026-04-28 22:24:37 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:24:37 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:24:37 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:24:37 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:24:37 | INFO     | __main__ | ============================================================
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:25:30 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:25:31 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_222530.json
+2026-04-28 22:25:31 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_222530.json
+2026-04-28 22:25:31 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_222530.json
+2026-04-28 22:25:31 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_222530.json
+2026-04-28 22:25:31 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_222530.csv
+2026-04-28 22:25:31 | INFO     | __main__ | ============================================================
+2026-04-28 22:25:31 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:25:31 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:25:31 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:25:31 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:25:31 | INFO     | __main__ | ============================================================
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_223218.json
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_223218.json
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_223218.json
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_223218.json
+2026-04-28 22:32:18 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_223218.csv
+2026-04-28 22:32:18 | INFO     | __main__ | ============================================================
+2026-04-28 22:32:18 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:32:18 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:32:18 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:32:18 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:32:18 | INFO     | __main__ | ============================================================
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:37:31 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:37:32 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_223846.json
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_223846.json
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_223846.json
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_223846.json
+2026-04-28 22:38:46 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_223846.csv
+2026-04-28 22:38:46 | INFO     | __main__ | ============================================================
+2026-04-28 22:38:46 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:38:46 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:38:46 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:38:46 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:38:46 | INFO     | __main__ | ============================================================
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:40:52 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_224052.json
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_224052.json
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_224052.json
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_224052.json
+2026-04-28 22:40:53 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_224052.csv
+2026-04-28 22:40:53 | INFO     | __main__ | ============================================================
+2026-04-28 22:40:53 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:40:53 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:40:53 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:40:53 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:40:53 | INFO     | __main__ | ============================================================
+2026-04-28 22:49:23 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:49:23 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:49:23 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:49:23 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_224923.json
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_224923.json
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_224923.json
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_224923.json
+2026-04-28 22:49:24 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_224923.csv
+2026-04-28 22:49:24 | INFO     | __main__ | ============================================================
+2026-04-28 22:49:24 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:49:24 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:49:24 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:49:24 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:49:24 | INFO     | __main__ | ============================================================
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | Iniciando análise de APIs - Modo Determinístico v2.0
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ============================================================
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 1: Normalizando dados...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | 323 APIs carregadas e normalizadas
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 2-3: Classificando riscos e calculando custos...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 4-9: Calculando scores...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 10-11: Gerando ranking...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 12: Gerando clusters...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 15: Validando...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ✅ Análise concluída com sucesso!
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | Total de APIs analisadas: 323
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | Impacto financeiro total: R$ 86,656.20
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | Desperdício total: R$ 564.80
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | ETAPA 16: Calculando estatísticas avançadas...
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator |   21 insights gerados
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | 📄 Análise completa salva em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/analise_completa_20260428_224958.json
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | 📄 Relatório executivo salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/relatorio_executivo_20260428_224958.json
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | 📄 Ranking simplificado salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/ranking_simplificado_20260428_224958.json
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | 📄 Estatísticas avançadas salvas em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/statistics_output_20260428_224958.json
+2026-04-28 22:49:58 | INFO     | src.core.orchestrator | 📄 Detalhamento CSV salvo em: /Users/macbookproa1990/PycharmProjects/ai-api-analysis/output/detalhamento_20260428_224958.csv
+2026-04-28 22:49:58 | INFO     | __main__ | ============================================================
+2026-04-28 22:49:58 | INFO     | __main__ | Status: VALIDO
+2026-04-28 22:49:58 | INFO     | __main__ | Total APIs: 323
+2026-04-28 22:49:58 | INFO     | __main__ | Impacto total: R$ 86,656.20
+2026-04-28 22:49:58 | INFO     | __main__ | Desperdício: R$ 564.80
+2026-04-28 22:49:58 | INFO     | __main__ | ============================================================

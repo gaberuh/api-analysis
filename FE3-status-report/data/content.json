@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "eyebrow": "EFICIÊNCIA OPERACIONAL & CONFIABILIDADE  ·  VISÃO EXECUTIVA",
+    "title": "API Health Intelligence Platform  —  One Page Estratégico",
+    "subtitle": "Score de risco multicritério · 323 APIs analisadas · Oportunidades de economia e próximos passos",
+    "date": "Abril 2026",
+    "logo": "O Itaú é feito de futuro"
+  },
+  "diagnostico": {
+    "sectionTitle": "DIAGNÓSTICO ATUAL — 323 APIs ANALISADAS",
+    "kpis": [
+      {
+        "value": "R$ 86.656",
+        "label": "Custo operacional / mês",
+        "sublabel": "Total do portfólio monitorado"
+      },
+      {
+        "value": "R$ 37.253",
+        "label": "Saving/mês com -20% latência",
+        "sublabel": "43% do custo total – maior alavanca"
+      },
+      {
+        "value": "63%",
+        "label": "APIs requerem ação",
+        "sublabel": "205 de 323 – 38 CRÍTICO e 167 ALTO"
+      },
+      {
+        "value": "126 APIs",
+        "label": "Candidatas a descomissionamento",
+        "sublabel": "Cluster LONG_TAIL – baixo volume"
+      }
+    ]
+  },
+  "critico": {
+    "sectionTitle": "35 APIs em CRÍTICO · top outliers de custo e erro",
+    "badge": "CRÍTICO",
+    "totalCost": "R$ 15.617/mês",
+    "tableHeaders": ["#", "API (Sigla)", "Score", "Erro %", "Latência", "Volumetria"],
+    "apis": [
+      { "rank": 1, "name": "NZ8  parceiros", "score": 7.30, "scoreMax": 10, "erro": "28,8%", "latencia": "3.939ms", "volumetria": "2 milhões", "ext": true },
+      { "rank": 2, "name": "NZ8  seller", "score": 6.75, "scoreMax": 10, "erro": "25,9%", "latencia": "2.592ms", "volumetria": "2 milhões", "ext": false },
+      { "rank": 3, "name": "C1  registrocontato antend.", "score": 6.75, "scoreMax": 10, "erro": "32,4%", "latencia": "6.191ms", "volumetria": "1 milhão", "ext": false },
+      { "rank": 4, "name": "OY8  atend. imob.", "score": 6.15, "scoreMax": 10, "erro": "76,4%", "latencia": "843ms", "volumetria": "239 mil", "ext": true },
+      { "rank": 5, "name": "MD8  onepage", "score": 6.00, "scoreMax": 10, "erro": "15,4%", "latencia": "2.015ms", "volumetria": "1,4 milhões", "ext": false },
+      { "rank": 6, "name": "JX9  oferta consig. icaas", "score": 6.00, "scoreMax": 10, "erro": "68,1%", "latencia": "2.485ms", "volumetria": "1,7 milhões", "ext": false },
+      { "rank": 7, "name": "FJ1  dispute-create bff", "score": 5.95, "scoreMax": 10, "erro": "24,7%", "latencia": "2.091ms", "volumetria": "1,5 milhões", "ext": false }
+    ],
+    "extLegend": "★  EXT = API externa — risco ao cliente final e impacto regulatório"
+  },
+  "correlacoes": {
+    "sectionTitle": "CORRELAÇÕES ESTATÍSTICAS E SIMULAÇÃO DE GANHOS",
+    "items": [
+      {
+        "tag": "Correlação forte · r = 1.00 · p = 0.000",
+        "title": "Volumetria determina custo",
+        "body": "3 APIs (HV3, HI8, PW2) concentram 54,7% do custo total — R$ 47.399/mês. Otimizar estas primeiro é o maior ROI.",
+        "action": "→ Priorizar alto volume antes de qualquer outra ação."
+      },
+      {
+        "tag": "Correlação moderada · r = 0.33 – principal driver de risco",
+        "title": "Latência é a maior alavanca de resultado",
+        "body": "Reduz latência em 20% economiza R$ 37.253/mês (43% do custo total). É 330x maior que o ganho equivalente em erros.",
+        "action": "→ Latência primeiro – retorno 330x superior que redução de erros."
+      },
+      {
+        "tag": "Insight estrutural · 30 APIs externas em CRÍTICO",
+        "title": "APIs externas = risco regulatório e de cliente",
+        "body": "Cluster CRÍTICAS_DE_NEGÓCIO com 30 APIs externas em alto risco. Custo R$ 498/mês, mas impacto reputacional é desproporcional.",
+        "action": "→ Tratar externals em sprint dedicado – risco > custo infra."
+      }
+    ]
+  },
+  "simulacao": {
+    "sectionTitle": "SIMULAÇÃO DE GANHOS E POTENCIAL DE SAVING",
+    "latencia": {
+      "label": "REDUÇÃO DE LATÊNCIA",
+      "items": [
+        { "percentual": "−10% latência", "barPercent": 50, "value": "R$ 18.626" },
+        { "percentual": "−20% latência", "barPercent": 100, "value": "R$ 37.253" },
+        { "percentual": "−30% latência", "barPercent": 100, "value": "R$ 37.658" }
+      ]
+    },
+    "erros": {
+      "label": "REDUÇÃO DE TAXA DE ERRO",
+      "items": [
+        { "percentual": "−10% erros", "barPercent": 25, "value": "" },
+        { "percentual": "−20% erros", "barPercent": 50, "value": "R$ 112,96" },
+        { "percentual": "−30% erros", "barPercent": 75, "value": "R$ 169,44" }
+      ]
+    },
+    "insight": "💡  Foco em latência: -20% economiza R$ 37.253/mês = 43% do custo total – 330x maior impacto que redução de erros"
+  },
+  "clusters": {
+    "sectionTitle": "CLUSTERS ESTRATÉGICOS — SEGMENTAÇÃO DO PORTFÓLIO",
+    "items": [
+      {
+        "title": "CRÍTICAS DE NEGÓCIO",
+        "metric": "30 APIs externas",
+        "body": "Alto risco ao cliente final e exposição regulatória. Custo baixo, mas impacto regulatório desproporcional.",
+        "action": "Sprint dedicado – risco > custo"
+      },
+      {
+        "title": "GARGALO OPERACIONAL",
+        "metric": "126 APIs – maturidade crítica",
+        "body": "Risco de instabilidade em releases. Ciclo de maturidade fora do padrão. Dívida técnica acumulada silenciosamente.",
+        "action": "Foco em governança"
+      },
+      {
+        "title": "CUSTO ALTO",
+        "metric": "61 APIs – 80,5% do custo",
+        "body": "Concentração crítica de R$ 69.718/mês. Qualquer redução de latência tem ROI imediato.",
+        "action": "Latência first – ROI elevado"
+      },
+      {
+        "title": "LONG TAIL",
+        "metric": "126 APIs - baixo volume",
+        "body": "Candidatas a revisão de SLA ou descomissionamento. Liberam capacidade operacional para focar no que importa.",
+        "action": "Oportunidade de descomissionamento"
+      }
+    ]
+  },
+  "scoreMetodologia": {
+    "sectionTitle": "COMO CHEGAMOS AQUI — SCORE DE RISCO MULTICRITÉRIO",
+    "criterios": [
+      {
+        "title": "PERFORMANCE",
+        "metric": "Latência de resposta",
+        "body": "Tempo médio (ms). Limiar crítico acima do P50 do portfólio — 9.120ms. APIs lentas degradam experiência e aumentam risco composto.",
+        "threshold": "CRÍTICO > 9.120ms"
+      },
+      {
+        "title": "TAXA DE ERRO",
+        "metric": "Falhas por requisição",
+        "body": "% de chamadas com erro. Limiar ATENÇÃO ≥1%, CRÍTICO >27,6% (P75). Cada erro é custo sem retorno — desperdício direto de R$.",
+        "threshold": "CRÍTICO > 27,6%"
+      },
+      {
+        "title": "MATURIDADE",
+        "metric": "Ciclo de release",
+        "body": "Tempo nas fases New → Pre-Released → Released. Ciclos longos = risco de instabilidade operacional e dívida técnica acumulada.",
+        "threshold": "YD3: 363 dias em New"
+      },
+      {
+        "title": "CUSTO & EFICIÊNCIA",
+        "metric": "Impacto financeiro",
+        "body": "Custo mensal e % de desperdício por erros. Outliers acima de R$11,60/mês recebem classificação CRÍTICO. Peso 1,5 no score.",
+        "threshold": "CRÍTICO > R$11,60/mês"
+      }
+    ],
+    "formula": "SCORE FINAL = (Performance × 2,0) + (Taxa de Erro × 2,0) + (Maturidade × 1,5) + (Custo × 1,5)   →   ALTO ≥ 3,5   |   CRÍTICO ≥ 5,0"
+  },
+  "roadmap": {
+    "sectionTitle": "API HEALTH INTELLIGENCE PLATFORM — PRÓXIMOS PASSOS",
+    "features": [
+      {
+        "icon": "📊",
+        "title": "Score de Risco Contínuo",
+        "body": "Recalculado automaticamente por ciclo. Nenhuma API em branco — visibilidade total e priorização baseada em dados, sem esforço manual."
+      },
+      {
+        "icon": "🤖",
+        "title": "Agente Autônomo de IA",
+        "body": "Detecta degradação em tempo real, cria recomendações e aciona alertas antes que o problema vire incidente ou afete o cliente final."
+      },
+      {
+        "icon": "💰",
+        "title": "Custo & Desperdício",
+        "body": "Rastreio de R$ gastos com requisições de erro. ROI de cada ação de melhoria visível em tempo real para toda a liderança."
+      },
+      {
+        "icon": "🚦",
+        "title": "Governança de Release",
+        "body": "Regras automáticas no ciclo New → Pre-Released → Released. 126 APIs com maturidade crítica monitoradas."
+      },
+      {
+        "icon": "🔗",
+        "title": "Visão por Sigla / Squad",
+        "body": "Agrupamento inteligente por squad, produto ou domínio. Cada time vê seu portfólio — a liderança vê o todo consolidado."
+      },
+      {
+        "icon": "🗑️",
+        "title": "Long Tail - Descomissionamento",
+        "body": "126 APIs candidatas identificadas. Libera capacidade operacional e reduz custos de manutenção desnecessária."
+      }
+    ],
+    "milestones": [
+      {
+        "id": "I1",
+        "period": "Semanas 1–4",
+        "title": "Estabilização",
+        "items": [
+          "›  Correção das 35 APIs cluster CRÍTICAS",
+          "›  Focar nas top 3 custos",
+          "›  SLOs mínimos definidos",
+          "›  Alertas de básicos ativos"
+        ],
+        "kpi": "KPI: latência P75 < 200 ms"
+      },
+      {
+        "id": "I2",
+        "period": "Meses 2–4",
+        "title": "Escala + Governança",
+        "items": [
+          "›  Tratamento das 126 APIs cluster ALTO",
+          "›  Score automático por ciclo",
+          "›  Dashboard para liderança",
+          "›  Iniciar revisão LONG TAIL (126 APIs)"
+        ],
+        "kpi": "KPI: 0 APIs em CRÍTICO"
+      },
+      {
+        "id": "I3",
+        "period": "Meses 5–12",
+        "title": "Plataforma com IA",
+        "items": [
+          "›  Agente autônomo em produção",
+          "›  Simulador OI de latência ativo",
+          "›  Descomissionamento das 105 long tail",
+          "›  Benchmarking contínuo"
+        ],
+        "kpi": "KPI: ≥ 80% APIs em NORMAL"
+      }
+    ]
+  },
+  "cta": {
+    "headline": "Aprovação necessária: iniciar I1 agora + investimento na Plataforma de Saúde de APIs",
+    "subline": "Não é observabilidade. É eficiência operacional e confiabilidade como ativo estratégico.",
+    "stats": [
+      { "value": "R$ 37.254", "label": "Saving /mês com -20% de latência" },
+      { "value": "35 APIs", "label": "em risco de incidente grave" },
+      { "value": "126 APIs", "label": "Candidatas a descomissionamento" },
+      { "value": "54,7%", "label": "Custo em apenas 3 APIs" }
+    ]
+  },
+  "footer": {
+    "left": "Diretoria de Tecnologia  ·  Score multicritério: performance (×2) + erro (×2) + maturidade (×1,5) + custo (×1,5)  ·  323 APIs  ·  Abril 2026",
+    "right": "API HEALTH INTELLIGENCE PLATFORM"
+  }
+}

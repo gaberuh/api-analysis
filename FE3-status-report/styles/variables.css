@@ -1,0 +1,63 @@
+:root {
+  /* Brand Colors */
+  --color-blue-primary: #283FFE;
+  --color-blue-dark: #003D7D;
+  --color-blue-darker: #002C5A;
+  --color-blue-medium: #1B5EA8;
+  --color-blue-light: #5886BF;
+  --color-blue-bg: #E8F0FA;
+  --color-blue-bg-alt: #E8F1FA;
+
+  --color-orange-primary: #EC7000;
+  --color-orange-medium: #F36203;
+  --color-orange-dark: #D45A00;
+  --color-orange-bg: #FEF0E6;
+
+  --color-green-primary: #1A6B3A;
+  --color-green-medium: #226B3A;
+  --color-green-bg: #EAF5EE;
+
+  --color-red-primary: #C0392B;
+  --color-red-medium: #C1392A;
+  --color-red-bg: #FDEDEB;
+
+  --color-dark: #1A1A2E;
+  --color-dark-alt: #19192E;
+  --color-gray-text: #444444;
+  --color-gray-muted: #888888;
+  --color-gray-light: #E8E8E8;
+  --color-white: #FFFFFF;
+  --color-off-white: #FAFAFA;
+  --color-bg-light: #F5F5F5;
+
+  /* Typography */
+  --font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  --font-size-xs: 9px;
+  --font-size-sm: 10px;
+  --font-size-base: 11px;
+  --font-size-md: 12px;
+  --font-size-lg: 13px;
+  --font-size-xl: 14px;
+  --font-size-2xl: 16px;
+  --font-size-3xl: 18px;
+  --font-size-4xl: 22px;
+  --font-size-5xl: 28px;
+  --font-size-hero: 36px;
+
+  /* Spacing */
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 10px;
+  --space-6: 12px;
+  --space-7: 14px;
+  --space-8: 16px;
+  --space-10: 20px;
+  --space-12: 24px;
+
+  /* Layout */
+  --page-width: 960px;
+  --section-accent-width: 5px;
+  --border-radius: 2px;
+}

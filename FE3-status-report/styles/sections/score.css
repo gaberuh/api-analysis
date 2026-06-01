@@ -1,0 +1,60 @@
+.score {
+  padding: 14px 24px 0;
+}
+
+.score__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.score-card {
+  border-left: 5px solid var(--color-blue-medium);
+  background: var(--color-off-white);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.score-card__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-blue-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.score-card__metric {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.score-card__body {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-text);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.score-card__threshold {
+  background: var(--color-red-bg);
+  color: var(--color-red-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 2px;
+  margin-top: var(--space-2);
+}
+
+.score__formula {
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  padding: 8px 14px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 2px;
+}

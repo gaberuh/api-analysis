@@ -1,0 +1,122 @@
+.roadmap {
+  padding: 14px 24px 0;
+}
+
+.roadmap__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 280px;
+  gap: var(--space-5);
+}
+
+.roadmap__features {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.feature-card {
+  background: var(--color-off-white);
+  border-top: 3px solid var(--color-orange-medium);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.feature-card__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.feature-card__title .emoji {
+  font-size: var(--font-size-xl);
+}
+
+.feature-card__body {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-text);
+  line-height: 1.4;
+}
+
+/* ── Milestones column ── */
+.roadmap__milestones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.milestone-card {
+  background: var(--color-off-white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+}
+
+.milestone-card__header {
+  background: var(--color-blue-dark);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.milestone-card__id {
+  background: var(--color-orange-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.milestone-card__header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-card__period {
+  font-size: var(--font-size-xs);
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+.milestone-card__title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.milestone-card__items {
+  padding: 8px 10px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.milestone-card__item {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-text);
+  line-height: 1.3;
+}
+
+.milestone-card__kpi {
+  margin: 4px 10px 8px;
+  background: var(--color-green-bg);
+  color: var(--color-green-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 2px;
+  text-align: center;
+}
